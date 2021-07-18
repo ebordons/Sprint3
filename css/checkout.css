@@ -3,6 +3,17 @@
 body {
     font-family: Poppins;
 }
-#errorPassword, #errorName, #errorPhone {
-    display: none;
-}
+.form-box .error-text {
+    color: red;
+    visibility: hidden;
+  }
+
+.form-box.form-error input {
+    border-bottom: 2px solid red;
+  }
+  .form-box.form-error .error-text {
+    visibility: visible;
+  }
+  .form-box.form-success input {
+    border-bottom: 2px solid lightseagreen;
+  }

@@ -43,38 +43,53 @@
     </div>
     <!-- icons end here -->
     <!-- Checkout starts here -->
-    <form class="form">
+    <form class="form" id="formulari">
         <div class="row bord p-5 shadow m-5">
             <div class="col-sm-6">
                 <div class="mt-3 row">
-                    <h5 class="my-auto">First Name :</h5>
-                    <input class="ml-3 name input rounded p-2" type="text" placeholder="First Name" />
-                    <p id="errorName">Numbers in the name are not valid</p>
+                    <div class="form-box">
+                        <h5 class="my-auto">First Name :</h5>
+                        <input class="ml-3 name input rounded p-2" name="nom" id="nom" type="text" placeholder="First Name"/>
+                        <p class="error-text">Has d'introduir un nom que només contingui lletres</p>
+                    </div>
                 </div>
                 <div class="mt-3 row ">
-                    <h5 class="my-auto">Email :</h5>
-                    <input class="ml-3 input rounded p-2" type="email" placeholder="Email" />
+                    <div class="form-box">
+                        <h5 class="my-auto">Email :</h5>
+                        <input class="ml-3 input rounded p-2" type="email" name="email" id="email" placeholder="Email" />
+                        <p class="error-text">Has d'introduir un email</p>
+                    </div>
                 </div>
                 <div class="mt-3 row ">
-                    <h5 class="my-auto">Address :</h5>
-                    <input class="ml-3 input rounded p-2" type="text" placeholder="Address" />
+                    <div class="form-box">
+                        <h5 class="my-auto">Address :</h5>
+                        <input class="ml-3 input rounded p-2" type="text" name="direccio" id="direccio" placeholder="Address" />
+                        <p class="error-text">Has d'introduir una adreça</p>
+                    </div>
                 </div>
             </div>
             <div class="col-sm-6">
                 <div class="mt-3 row">
-                    <h5 class="my-auto name my-auto">Last Name :</h5>
-                    <input class="ml-3 input rounded p-2" type="text" placeholder="Last Name" />
+                    <div class="form-box">
+                        <h5 class="my-auto name my-auto">Last Name :</h5>
+                        <input class="ml-3 input rounded p-2" type="text" name="cognom" id="cognom" placeholder="Last Name" />
+                        <p class="error-text">Has d'introduir un cognom que només contingui lletres</p>
+                    </div>
                 </div>
                 <div class="mt-3 row">
-                    <h5 class="my-auto my-auto">Password :</h5>
-                    <input class="ml-3 input password rounded p-2" title="(4-8 characters)" type="password" minlength="4"
-                        maxlength="8" placeholder="Password" />
-                    <p id="errorPassword">Enter a correct password</p>
+                    <div class="form-box">
+                        <h5 class="my-auto my-auto">Password :</h5>
+                        <input class="ml-3 input password rounded p-2" title="(4-8 characters)" type="password" name="password" id="password" minlength="4"
+                            maxlength="8" placeholder="Password" />
+                        <p class="error-text">Has d'introduir una contrasenya que contingui entre 4 i 8 caràcters i hi hagi un número i una lletra</p>
+                    </div>
                 </div>
                 <div class="mt-3 row">
-                    <h5 class="my-auto my-auto">Phone Number :</h5>
-                    <input class="ml-3 phone input rounded p-2" type="number" placeholder="Phone No." />
-                    <p id="errorPhone">Invalid phone number!!</p>
+                    <div class="form-box">
+                        <h5 class="my-auto my-auto">Phone Number :</h5>
+                        <input class="ml-3 phone input rounded p-2" type="number" name="telefon" id="telefon" placeholder="Phone No." />
+                        <p class="error-text">Has d'introduir un número de 9 xifres</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -83,7 +98,7 @@
         <!-- Checkout ends here -->
         <!-- Buy button -->
         <div class="m-5 final text-right">
-            <button type="submit" id="btn" class="p-2 px-4 btn btn-primary shadow-lg" onclick="validate()"><i
+            <button type="submit" id="btn" class="p-2 px-4 btn btn-primary shadow-lg" disabled><i
                     class="fas fa-cart-arrow-down p-2"></i>Buy</button>
         </div>
     </form>
